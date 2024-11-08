@@ -90,7 +90,6 @@ def slope_intercept(m,b,lower_x,upper_x):
     if lower_x > upper_x:
         return False
     
-
     y_values = []
     for value in range(lower_x,upper_x + 1):
         y_values.append(m*value + b)
