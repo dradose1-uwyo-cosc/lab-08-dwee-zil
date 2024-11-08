@@ -63,21 +63,25 @@ print("*" * 75)
 def slope_intercept(m,b,lower_x,upper_x):
     """Output the y-values of a y = mx + b equation given x bounds"""
     if type(m) == str:
-        m = convert_string(m)
-    if not convert_string(m):
-        return False
+        if not convert_string(m):
+            return False
+        else:
+            m = convert_string(m)
     if type(b) == str:
-        b = convert_string(b)
-    if not convert_string(b):
-        return False
+        if not convert_string(b):
+            return False
+        else:
+            b = convert_string(b)
     if type(lower_x) == str:
-        lower_x = convert_string(lower_x)
-    if not convert_string(lower_x):
-        return False
+        if not convert_string(lower_x):
+            return False
+        else:
+            lower_x = convert_string(lower_x)
     if type(upper_x) == str:
-        upper_x = convert_string(upper_x)
-    if not convert_string(upper_x):
-        return False
+        if not convert_string(upper_x):
+            return False
+        else:
+            upper_x = convert_string(upper_x)
     
     if type(lower_x) == float:
         return False
@@ -86,6 +90,7 @@ def slope_intercept(m,b,lower_x,upper_x):
     if lower_x > upper_x:
         return False
     
+
     y_values = []
     for value in range(lower_x,upper_x + 1):
         y_values.append(m*value + b)
